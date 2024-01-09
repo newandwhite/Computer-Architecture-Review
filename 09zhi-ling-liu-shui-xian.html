@@ -335,8 +335,21 @@
 <h3 id="&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x7ED3;&#x6784;">&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x7ED3;&#x6784;</h3>
 <ul>
 <li>&#x4E0D;&#x540C;&#x5BB9;&#x91CF;&#x3001;&#x7ED3;&#x6784;&#x3001;&#x5757;&#x5927;&#x5C0F;&#x7684;offset&#x3001;index&#x3001;tag&#x4F4D;&#x7F6E;</li>
-<li>&#x66FF;&#x6362;&#x7B97;&#x6CD5;&#x3001;&#x5199;&#x547D;&#x4E2D;&#x548C;&#x5199;&#x4E0D;&#x547D;&#x4E2D;&#x7B97;&#x6CD5;&#x7684;&#x91CD;&#x8981;&#x6982;&#x5FF5;</li>
-<li>AMAT&#x8BA1;&#x7B97;&#x516C;&#x5F0F;</li>
+<li>&#x66FF;&#x6362;&#x7B97;&#x6CD5;&#x3001;&#x5199;&#x547D;&#x4E2D;&#x548C;&#x5199;&#x4E0D;&#x547D;&#x4E2D;&#x7B97;&#x6CD5;&#x7684;&#x91CD;&#x8981;&#x6982;&#x5FF5;<ul>
+<li>&#x66FF;&#x6362;&#x7B97;&#x6CD5;&#xFF1A;&#x968F;&#x673A;&#x66FF;&#x6362;&#x3001;LRU&#x3001;FIFO</li>
+<li>&#x5757;&#x7D22;&#x5F15;&#x65B9;&#x5F0F;&#xFF1A;&#x76F4;&#x63A5;&#x76F8;&#x8054;&#x3001;&#x5168;&#x76F8;&#x8FDE;&#x3001;&#x7EC4;&#x76F8;&#x8054;</li>
+<li>&#x5199;&#x7B56;&#x7565;&#xFF1A;&#x5199;&#x7A7F;&#x900F;&#x3001;&#x5199;&#x56DE;</li>
+</ul>
+</li>
+<li>AMAT&#x8BA1;&#x7B97;&#x516C;&#x5F0F;<ul>
+<li>AMAT = HitTime + MissRate &#xD7; Penalty
+&#xFF08;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x547D;&#x4E2D;&#xFF0C;HitTime&#x90FD;&#x8981;&#x8BA1;&#x5165;
+&#xFF09;<blockquote>
+<p>&#x4E0B;&#x7EA7;AMAT&#x90FD;&#x7406;&#x89E3;&#x4E3A;Penalty</p>
+</blockquote>
+</li>
+</ul>
+</li>
 </ul>
 
                                 
@@ -381,7 +394,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"09指令流水线","level":"1.10","depth":1,"next":{"title":"10并行编程基础","level":"1.11","depth":1,"path":"10bing-xing-bian-cheng-ji-chu.md","ref":"10bing-xing-bian-cheng-ji-chu.md","articles":[]},"previous":{"title":"08运算器设计","level":"1.9","depth":1,"path":"08yun-suan-qi-she-ji.md","ref":"08yun-suan-qi-she-ji.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"09zhi-ling-liu-shui-xian.md","mtime":"2023-12-26T14:58:06.763Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-08T16:46:09.125Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"09指令流水线","level":"1.10","depth":1,"next":{"title":"10并行编程基础","level":"1.11","depth":1,"path":"10bing-xing-bian-cheng-ji-chu.md","ref":"10bing-xing-bian-cheng-ji-chu.md","articles":[]},"previous":{"title":"08运算器设计","level":"1.9","depth":1,"path":"08yun-suan-qi-she-ji.md","ref":"08yun-suan-qi-she-ji.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"09zhi-ling-liu-shui-xian.md","mtime":"2024-01-09T01:38:44.540Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-09T01:40:02.476Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
